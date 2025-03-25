@@ -1,0 +1,18 @@
+working_directory = "/users/gagep" # Use on windows
+
+[colors]
+# transparent_background_colors = true
+
+[font]
+normal = {family = "GoMono Nerd Font Mono"}
+# normal = {family = "ProggyClean CE Nerd Font Propo"}
+# normal = {family= "OverpassM Nerd Font Mono"}
+offset = {x = 1, y = 5}
+size = 11
+
+[keyboard]
+bindings = [
+    {key = "q", mods = "Control|Shift", action = "Quit"},
+    {key = "w", mods = "Control|Shift", action = "Quit"},
+    {key = "n", mods = "Control|Shift", action = "CreateNewWindow"},
+]
