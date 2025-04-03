@@ -1,0 +1,38 @@
+snippet luaclass Basic lua class 
+	local util = require("util")({"table"})
+	local ClassName = {}
+
+	function ClassName:init()
+	end
+	function ClassName:update(dt)
+	end
+	function ClassName:draw()
+	end
+
+	setmetatable(ClassName, {
+		__call = function(_)
+			local newClassName = {}
+			util.table.deepCopy(newClassName, ClassName)
+			setmetatable(newClassName, {__index = ClassName})
+			newClassName:init()
+			return newClassName
+		end
+	})
+
+	return ClassName
+
+snippet privatefunctions Private Functions Comment
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │ Private Functions                                       │
+	-- ╰─────────────────────────────────────────────────────────╯
+
+snippet corefunctions Core Functions Comment
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │ Core Functions                                          │
+	-- ╰─────────────────────────────────────────────────────────╯
+
+snippet publicfunctions Public Functions Comment
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │ Public Functions                                        │
+	-- ╰─────────────────────────────────────────────────────────╯
+
