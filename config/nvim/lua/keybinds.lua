@@ -3,9 +3,12 @@ local opts = { noremap = true, silent = true }
 -- Basic vim stuff.
 opts.desc = "Netrw"
 vim.keymap.set("n", "<leader>b", ":Explore<CR>", opts)
+opts.desc = "Floating diagnostic"
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+opts.desc = "Diagnostics list"
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-vim.keymap.set("n", "<C-c>", ":Telescope colorscheme<CR>", opts)
+opts.desc = "View colorschemes"
+vim.keymap.set("n", "<leader>cs", ":Telescope colorscheme<CR>", opts)
 
 -- Terminal
 vim.keymap.set({"n","v","i", "t"}, "<C-t>", function()
