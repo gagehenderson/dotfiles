@@ -3,6 +3,13 @@
 --
 -- All plugin files are referenced in scripts.init-plugins.lua
 return {
+    -- Lualine, uncomment when I actually have a use for it.
+    -- {
+    --     'nvim-lualine/lualine.nvim',
+    --     dependencies = { 'nvim-tree/nvim-web-devicons' },
+    --     config = function()
+    --     end
+    -- },
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
