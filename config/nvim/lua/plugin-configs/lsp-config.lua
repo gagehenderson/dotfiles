@@ -125,7 +125,16 @@ return function()
             -- capabilities = {},
             settings = {
                 Lua = {
-                    workspace = { checkThirdParty = false },
+                    runtime = {
+                        version = "LuaJIT"
+                    },
+                    workspace = {
+                        library = {
+                            vim.fn.stdpath("config") .. "/lua",
+                            vim.fn.getcwd()
+                        },
+                        checkThirdParty = false
+                    },
                     diagnostics = {
                         globals = { 'love', 'vim' }
                     },
