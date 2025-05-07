@@ -81,5 +81,13 @@ return {
             require("toggleterm").setup()
         end,
     },
-    { "LudoPinelli/comment-box.nvim" }
+    { "LudoPinelli/comment-box.nvim" },
+    {
+        "andweeb/presence.nvim",
+        config = function()
+            require("presence").setup({
+                auto_refresh = true,
+            })
+        end
+    },
 }
