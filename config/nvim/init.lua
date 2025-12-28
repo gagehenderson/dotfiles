@@ -10,5 +10,6 @@ require("scripts.init-plugins")
 require("neovide-config")
 require("vim-config")
 require("keybinds")
+require("daily-journals")
 
 vim.cmd("colorscheme "..colorscheme)
