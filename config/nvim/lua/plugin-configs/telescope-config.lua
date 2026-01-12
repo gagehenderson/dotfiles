@@ -17,6 +17,7 @@ return function()
                 require('telescope.themes').get_dropdown(),
             },
         },
+        --defaults = { preview = { treesitter = false } }
     }
 
     -- Enable Telescope extensions if they are installed

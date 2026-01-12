@@ -4,25 +4,17 @@
 -- All plugin files are referenced in scripts.init-plugins.lua
 return {
     {
-        "nvim-treesitter/nvim-treesitter",
+        'nvim-treesitter/nvim-treesitter',
         lazy = false,
-        build = ":TSUpdate",
+        build = ':TSUpdate',
         config = function()
-            -- local configs = require("nvim-treesitter.configs")
-            --
-            -- configs.setup({
-            --     ensure_installed = { "lua", "vim", "vimdoc", "javascript", "html", "rust", "php", "typescript" },
-            --     sync_install = false,
-            --     highlight = { enable = true },
-            --     indent = { enable = true }
-            -- })
-        end
+            require('nvim-treesitter').install({ "lua", "vim", "vimdoc", "javascript", "html", "php", "typescript" })
+        end,
     },
-
     {
         'nvim-telescope/telescope.nvim',
         event = 'VimEnter',
-        branch = '0.1.x',
+        branch = 'master',
         dependencies = {
             'nvim-lua/plenary.nvim',
             {

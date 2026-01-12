@@ -12,6 +12,4 @@ require("vim-config")
 require("keybinds")
 require("daily-journals")
 
-require'nvim-treesitter'.install { "lua", "vim", "vimdoc", "javascript", "html", "rust", "php", "typescript" }
-
 vim.cmd("colorscheme "..colorscheme)
