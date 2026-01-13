@@ -49,8 +49,20 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
+-- Enable auto-indentation.
+vim.o.autoindent = true
+vim.o.smartindent = true
+
 vim.o.wrap = false
 
 -- Force scroll to keep cursor within x lines.
 vim.o.scrolloff = 7
+
+-- Enable treesitter-based indentation for specific filetypes.
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "php", "javascript", "typescript", "lua", "html" },
+    callback = function()
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+})
 
