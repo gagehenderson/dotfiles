@@ -57,10 +57,10 @@ local function open_daily_note(t)
     vim.cmd.edit(vim.fn.fnameescape(file))
 
     -- If Harpoon is installed, optionally add to list (works with v2 API)
-    local harpoon = require("harpoon")
-    if harpoon and harpoon.list then
-        harpoon:list():add() -- YOLO
-    end
+--     local harpoon = require("harpoon")
+--     if harpoon and harpoon.list then
+--         harpoon:list():add()
+--     end
 end
 
 local function open_tasks()
