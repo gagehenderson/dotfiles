@@ -74,7 +74,24 @@ return function()
 
     -- Project picker (project.nvim)
     vim.keymap.set('n', '<leader>sp', function()
-        require('telescope').extensions.projects.projects{}
+        require('telescope').extensions.projects.projects({
+            attach_mappings = function(prompt_bufnr)
+                local actions = require('telescope.actions')
+                local action_state = require('telescope.actions.state')
+                local project_mod = require('project_nvim.project')
+                actions.select_default:replace(function()
+                    local selected = action_state.get_selected_entry(prompt_bufnr)
+                    if selected == nil then
+                        actions.close(prompt_bufnr)
+                        return
+                    end
+                    actions.close(prompt_bufnr)
+                    project_mod.set_pwd(selected.value, "telescope")
+                    vim.cmd("Explore " .. selected.value)
+                end)
+                return true
+            end,
+        })
     end, { desc = '[S]earch [P]rojects' })
 
 
