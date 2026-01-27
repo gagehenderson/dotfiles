@@ -81,6 +81,17 @@ return {
             require("toggleterm").setup()
         end,
     },
+    {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup({
+                -- Detect projects by these markers
+                patterns = { ".git", "package.json", "Cargo.toml", "*.sln" },
+                -- Use Telescope for the picker
+                detection_methods = { "pattern", "lsp" },
+            })
+        end,
+    },
     { "LudoPinelli/comment-box.nvim" },
     {
         "andweeb/presence.nvim",

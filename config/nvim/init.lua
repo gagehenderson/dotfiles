@@ -13,3 +13,14 @@ require("keybinds")
 require("daily-journals")
 
 vim.cmd("colorscheme "..colorscheme)
+
+-- Open project picker when starting Neovim without a file or directory
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        if vim.fn.argc() == 0 then
+            vim.schedule(function()
+                require('telescope').extensions.projects.projects{}
+            end)
+        end
+    end,
+})

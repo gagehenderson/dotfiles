@@ -23,6 +23,7 @@ return function()
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
+    pcall(require('telescope').load_extension, 'projects')
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -59,6 +60,11 @@ return function()
     vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[S]earch [N]eovim files' })
+
+    -- Project picker (project.nvim)
+    vim.keymap.set('n', '<leader>sp', function()
+        require('telescope').extensions.projects.projects{}
+    end, { desc = '[S]earch [P]rojects' })
 
 
 end

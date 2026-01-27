@@ -8,7 +8,7 @@ local JOURNAL_BASE = NOTES_BASE .. "/Journal"
 local TASKS_FILE   = NOTES_BASE .. "/tasks.md"
 
 -- Toggle: also open tasks on start?
-local OPEN_ON_START = true
+local OPEN_ON_START = false
 
 -- Join paths with forward slashes
 local function join(...) return table.concat({...}, "/") end
