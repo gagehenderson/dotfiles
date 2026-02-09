@@ -36,3 +36,24 @@ _When using chocolatey (or installing chocolatey itself) you must be in a termin
 _This assumes you have setup git_
 1. Clone this repo.
 2. Inside of `./config/` run `push-local-nvim.bat` in order to push the repo's neovim settings to your device.
+
+# Terminal & Shell
+### WezTerm
+1. Install WezTerm `choco install wezterm`
+2. Run `config/wezterm/copy-local-wezterm.bat` to deploy the config.
+
+### PowerShell 7
+1. Install PowerShell 7 `choco install pwsh`
+
+### Oh My Posh
+1. Install Oh My Posh `choco install oh-my-posh`
+2. Run `config/omp/copy-local-omp.bat` to deploy the custom theme.
+
+### PowerShell Profile
+1. Run `config/powershell/copy-local-powershell.bat` to deploy the profile (loads Oh My Posh with the custom theme).
+
+### Nerd Font
+1. Install CaskaydiaCove Nerd Font `choco install nerd-fonts-cascadiacode`
+
+# Claude Code
+1. Run `config/claude/copy-local-claude.bat` to deploy Claude Code settings and global instructions.
