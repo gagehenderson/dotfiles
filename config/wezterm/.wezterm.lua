@@ -9,46 +9,46 @@ config.font = wezterm.font("CaskaydiaCove NFM")
 config.font_size = 12.0
 config.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
 
--- Custom Matrix color scheme
+-- Custom Gruvbox Dark color scheme
 config.color_schemes = {
-  ["Matrix"] = {
-    foreground = "#00ff00",
-    background = "#000000",
-    cursor_bg = "#00ff00",
-    cursor_fg = "#000000",
-    cursor_border = "#00ff00",
-    selection_fg = "#000000",
-    selection_bg = "#00ff00",
+  ["Gruvbox Dark"] = {
+    foreground = "#ebdbb2",
+    background = "#282828",
+    cursor_bg = "#ebdbb2",
+    cursor_fg = "#282828",
+    cursor_border = "#ebdbb2",
+    selection_fg = "#282828",
+    selection_bg = "#d5c4a1",
     ansi = {
-      "#000000",  -- black
-      "#00aa00",  -- "red" -> dark green
-      "#00ff00",  -- green -> bright green
-      "#33ff33",  -- "yellow" -> light green
-      "#009900",  -- "blue" -> medium green
-      "#00cc00",  -- "magenta" -> green
-      "#66ff66",  -- "cyan" -> pale green
-      "#00ff00",  -- "white" -> green
+      "#282828",  -- black
+      "#cc241d",  -- red
+      "#98971a",  -- green
+      "#d79921",  -- yellow
+      "#458588",  -- blue
+      "#b16286",  -- magenta
+      "#689d6a",  -- cyan
+      "#a89984",  -- white
     },
     brights = {
-      "#003300",  -- bright black (dim green)
-      "#00cc00",  -- bright "red"
-      "#33ff33",  -- bright green
-      "#66ff66",  -- bright "yellow"
-      "#00ff00",  -- bright "blue"
-      "#33ff33",  -- bright "magenta"
-      "#99ff99",  -- bright "cyan"
-      "#ffffff",  -- bright white
+      "#928374",  -- bright black
+      "#fb4934",  -- bright red
+      "#b8bb26",  -- bright green
+      "#fabd2f",  -- bright yellow
+      "#83a598",  -- bright blue
+      "#d3869b",  -- bright magenta
+      "#8ec07c",  -- bright cyan
+      "#ebdbb2",  -- bright white
     },
   },
 }
-config.color_scheme = "Matrix"
+config.color_scheme = "Gruvbox Dark"
 
 -- Window appearance
 config.window_background_opacity = 0.85
 config.win32_system_backdrop = "Acrylic"
 config.window_padding = { left = 12, right = 12, top = 12, bottom = 12 }
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.integrated_title_button_color = "#003b00"
+config.integrated_title_button_color = "#3c3836"
 config.window_close_confirmation = "NeverPrompt"
 
 -- Tab bar
@@ -60,40 +60,40 @@ config.hide_tab_bar_if_only_one_tab = false
 config.window_frame = {
   font = wezterm.font("CaskaydiaCove NFM", { weight = "Bold" }),
   font_size = 10.0,
-  active_titlebar_bg = "#000000",
-  inactive_titlebar_bg = "#000000",
-  active_titlebar_fg = "#00ff00",
-  inactive_titlebar_fg = "#005500",
-  active_titlebar_border_bottom = "#003b00",
-  inactive_titlebar_border_bottom = "#003b00",
-  button_fg = "#00ff00",
-  button_bg = "#000000",
-  button_hover_fg = "#000000",
-  button_hover_bg = "#00ff00",
+  active_titlebar_bg = "#282828",
+  inactive_titlebar_bg = "#282828",
+  active_titlebar_fg = "#ebdbb2",
+  inactive_titlebar_fg = "#665c54",
+  active_titlebar_border_bottom = "#3c3836",
+  inactive_titlebar_border_bottom = "#3c3836",
+  button_fg = "#ebdbb2",
+  button_bg = "#282828",
+  button_hover_fg = "#282828",
+  button_hover_bg = "#d79921",
 }
 
 config.colors = {
   tab_bar = {
-    background = "#000000",
+    background = "#282828",
     active_tab = {
-      bg_color = "#003b00",
-      fg_color = "#00ff00",
+      bg_color = "#3c3836",
+      fg_color = "#ebdbb2",
     },
     inactive_tab = {
-      bg_color = "#000000",
-      fg_color = "#005500",
+      bg_color = "#282828",
+      fg_color = "#665c54",
     },
     inactive_tab_hover = {
-      bg_color = "#002200",
-      fg_color = "#00ff00",
+      bg_color = "#504945",
+      fg_color = "#ebdbb2",
     },
     new_tab = {
-      bg_color = "#000000",
-      fg_color = "#005500",
+      bg_color = "#282828",
+      fg_color = "#665c54",
     },
     new_tab_hover = {
-      bg_color = "#003b00",
-      fg_color = "#00ff00",
+      bg_color = "#3c3836",
+      fg_color = "#ebdbb2",
     },
   },
 }
