@@ -94,6 +94,15 @@ return {
     },
     { "LudoPinelli/comment-box.nvim" },
     {
+        -- glaude.nvim: multi-session Claude Code manager. Local dev
+        -- repo at ~/Personal Projects/glaude. Switch to a github
+        -- spec when the plugin is stable enough to consume from
+        -- main without pulling unfinished changes.
+        dir = vim.fn.expand("~/Personal Projects/glaude"),
+        cmd = { "Glaude", "GlaudeSend" },
+        opts = {},
+    },
+    {
         "andweeb/presence.nvim",
         config = function()
             require("presence").setup({
