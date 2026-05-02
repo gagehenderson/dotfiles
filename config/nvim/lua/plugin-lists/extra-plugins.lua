@@ -99,7 +99,11 @@ return {
         -- spec when the plugin is stable enough to consume from
         -- main without pulling unfinished changes.
         dir = vim.fn.expand("~/Personal Projects/glaude"),
-        cmd = { "Glaude", "GlaudeSend", "GlaudeList", "GlaudeNext", "GlaudePrev" },
+        cmd = {
+            "Glaude", "GlaudeSend", "GlaudeList", "GlaudeNext", "GlaudePrev",
+            "GlaudeResume", "GlaudeRename", "GlaudeInfo", "GlaudeUsage",
+            "GlaudeRestart",
+        },
         opts = {
             -- <C-CR> isn't reliably sent by every terminal; <C-s>
             -- works everywhere. Trade-off: terminals interpret <C-s>
