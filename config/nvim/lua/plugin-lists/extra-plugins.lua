@@ -58,7 +58,10 @@ return {
     { "gelguy/wilder.nvim" },
     { "folke/which-key.nvim" },
     {
-        "ggandor/leap.nvim",
+        -- Upstream moved off GitHub Jan 2026; the original
+        -- ggandor/leap.nvim repo is frozen and warns on launch.
+        url = "https://codeberg.org/andyg/leap.nvim",
+        name = "leap.nvim",
         lazy = false,
         config = function()
             require('leap').create_default_mappings()
