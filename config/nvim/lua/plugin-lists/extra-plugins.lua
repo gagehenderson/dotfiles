@@ -105,6 +105,7 @@ return {
             "GlaudeRestart", "GlaudeColor", "GlaudeSidebar", "GlaudeQuit",
             "GlaudeClear", "GlaudeCancel", "GlaudeMode", "GlaudeModel",
             "GlaudeContinue", "GlaudeAttach", "GlaudeSave", "GlaudeYank",
+            "GlaudeContext", "GlaudeAsk", "GlaudeGrep",
         },
         opts = {
             -- <C-CR> isn't reliably sent by every terminal; <C-s>
