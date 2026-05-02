@@ -61,7 +61,7 @@ return {
     -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
-        event = 'InsertEnter',
+        event = { 'InsertEnter', 'CmdlineEnter' },
         dependencies = {
             -- Snippet Engine & its associated nvim-cmp source
             {
@@ -80,6 +80,8 @@ return {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-buffer',
           },
         config = require("plugin-configs.cmp-config")
     },

@@ -67,4 +67,36 @@ return function()
         { name = 'nvim_lsp_signature_help' },
       },
     }
+
+    -- Cmdline (`:`) completion. `cmdline` source feeds the matches
+    -- you'd get from native `wildmenu` (commands, flags, paths) plus
+    -- buffer-word fallback. Tab/S-Tab cycle the popup; <CR> still
+    -- runs the command.
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline({
+        ['<Tab>'] = {
+          c = function(fallback)
+            if cmp.visible() then cmp.select_next_item()
+            else cmp.complete() end
+          end,
+        },
+        ['<S-Tab>'] = {
+          c = function(fallback)
+            if cmp.visible() then cmp.select_prev_item()
+            else fallback() end
+          end,
+        },
+      }),
+      sources = cmp.config.sources(
+        { { name = 'path' } },
+        { { name = 'cmdline' } }
+      ),
+      matching = { disallow_symbol_nonprefix_matching = false },
+    })
+
+    -- Search (`/` and `?`) completion: just buffer words. Cheap, fast.
+    cmp.setup.cmdline({ '/', '?' }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = { { name = 'buffer' } },
+    })
   end
