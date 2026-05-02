@@ -64,7 +64,9 @@ return {
         name = "leap.nvim",
         lazy = false,
         config = function()
-            require('leap').create_default_mappings()
+            -- Codeberg fork renamed `create_default_mappings` to
+            -- `add_default_mappings`.
+            require('leap').add_default_mappings()
         end
     },
     {
