@@ -121,6 +121,9 @@ return {
             -- Terminal is BlexMono Nerd Font Mono, so swap in the
             -- icon glyph set in the sidebar attention column.
             glyphs = { nerd = true },
+            -- Land in normal mode so motions/search/scrollback work
+            -- before the first keystroke. Hit `i` to type.
+            start_in_insert = false,
         },
     },
     {
