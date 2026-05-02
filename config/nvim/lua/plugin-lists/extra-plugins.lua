@@ -113,6 +113,9 @@ return {
             -- as XOFF (flow-control pause). nvim disables that on
             -- modern Windows/Win Terminal so this is fine.
             submit_key = "<C-s>",
+            -- Terminal is BlexMono Nerd Font Mono, so swap in the
+            -- icon glyph set in the sidebar attention column.
+            glyphs = { nerd = true },
         },
     },
     {
