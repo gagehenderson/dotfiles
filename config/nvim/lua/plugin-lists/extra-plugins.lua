@@ -105,12 +105,13 @@ return {
         -- main without pulling unfinished changes.
         dir = vim.fn.expand("~/Personal Projects/glaude"),
         cmd = {
-            "Glaude", "GlaudeSend", "GlaudeList", "GlaudeNext", "GlaudePrev",
-            "GlaudeResume", "GlaudeRename", "GlaudeInfo", "GlaudeUsage",
-            "GlaudeRestart", "GlaudeColor", "GlaudeSidebar", "GlaudeQuit",
-            "GlaudeClear", "GlaudeCancel", "GlaudeMode", "GlaudeModel",
-            "GlaudeContinue", "GlaudeAttach", "GlaudeSave", "GlaudeYank",
-            "GlaudeContext", "GlaudeAsk", "GlaudeGrep",
+            "Glaude", "GlaudeNew", "GlaudeSend", "GlaudeList",
+            "GlaudeNext", "GlaudePrev", "GlaudeResume", "GlaudeRename",
+            "GlaudeInfo", "GlaudeUsage", "GlaudeRestart", "GlaudeColor",
+            "GlaudeSidebar", "GlaudeQuit", "GlaudeClear", "GlaudeCancel",
+            "GlaudeMode", "GlaudeModel", "GlaudeContinue", "GlaudeAttach",
+            "GlaudeSave", "GlaudeYank", "GlaudeContext", "GlaudeAsk",
+            "GlaudeGrep",
         },
         opts = {
             -- <C-CR> isn't reliably sent by every terminal; <C-s>
