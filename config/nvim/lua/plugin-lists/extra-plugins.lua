@@ -100,7 +100,13 @@ return {
         -- main without pulling unfinished changes.
         dir = vim.fn.expand("~/Personal Projects/glaude"),
         cmd = { "Glaude", "GlaudeSend" },
-        opts = {},
+        opts = {
+            -- <C-CR> isn't reliably sent by every terminal; <C-s>
+            -- works everywhere. Trade-off: terminals interpret <C-s>
+            -- as XOFF (flow-control pause). nvim disables that on
+            -- modern Windows/Win Terminal so this is fine.
+            submit_key = "<C-s>",
+        },
     },
     {
         "andweeb/presence.nvim",
